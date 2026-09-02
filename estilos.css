@@ -102,3 +102,52 @@ body {
     text-transform: uppercase; /* Pone el texto en mayúsculas (opcional) */
     text-shadow: 2px 2px 5px rgba(0,0,0,0.8); /* Le da una pequeña sombra al texto para que resalte más */
 }
+
+/* Esta clase se la pondremos y quitaremos al body con JavaScript */
+.modo-oscuro {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+/* Ajustamos el contenedor de info para que no desentone en la oscuridad */
+.modo-oscuro .contenedor-info {
+    background-color: #2d2d2d;
+    color: white;
+}
+
+/* Estilo base del botón */
+#btn-oscuro {
+    background-color: #2c3e50; /* Color inicial oscuro */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Crea un diseño tipo píldora */
+    padding: 12px 24px; /* Espacio interno (arriba/abajo, izquierda/derecha) */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer; /* Cambia la flecha por una mano */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra difuminada en la base */
+    transition: all 0.3s ease; /* Hace que cualquier cambio de estado tome 0.3 segundos */
+}
+
+/* Efecto al pasar el cursor por encima (Hover) */
+#btn-oscuro:hover {
+    background-color: #34495e; /* Un tono ligeramente más claro */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* La sombra se expande */
+    transform: translateY(-2px); /* Da la ilusión de que el botón se levanta */
+}
+
+/* Efecto al hacer clic (Active) */
+#btn-oscuro:active {
+    transform: translateY(1px); /* Da la ilusión de que el botón se hunde físicamente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* La sombra se reduce */
+}
+
+/* Estilo del botón cuando la clase modo-oscuro está activa en el body */
+.modo-oscuro #btn-oscuro {
+    background-color: #f1c40f; /* Un amarillo vibrante */
+    color: #1a1a1a; /* Texto oscuro para contrastar */
+}
+
+.modo-oscuro #btn-oscuro:hover {
+    background-color: #f39c12; /* Un amarillo más intenso al pasar el cursor */
+}
